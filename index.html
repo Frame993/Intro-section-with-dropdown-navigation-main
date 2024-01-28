@@ -15,8 +15,10 @@
   <style type="text/tailwindcss">
     @layer utilities {
      /* * {
-       border: 1px solid red;
-     } */
+      padding: 0;
+      margin: 0;
+      outline: 1px solid red;
+     }  */
     }
   </style>
 
@@ -43,16 +45,17 @@
 
 </head>
 
-<body class="bg-almostWhite flex flex-col items-center">
+<body class="bg-almostWhite items-center flex flex-col w-full">
 
   <header class="flex w-[95%] py-8 justify-between items-center">
 
     <div class="flex gap-12 items-center">
+      
       <figure class="w-[100px]">
         <a href="#"><img src="./images/logo.svg" alt=""></a>
       </figure>
 
-      <nav id="nav" class="flex gap-14 items-center ">
+      <nav id="nav" class="md:flex gap-14 items-center hidden">
         <div class="flex flex-col items-end font-semibold gap-2 text-almostGrey">
           <button id="Features" class="flex gap-1 hover:text-almostBlack">
             Features
@@ -96,7 +99,11 @@
       </nav>
     </div>
 
-    <section class="flex gap-2 items-center">
+    <button>
+      <img class="md:hidden" src="./images/icon-menu.svg" alt="">
+    </button>
+    
+    <section class="gap-2 items-center hidden md:flex">
 
       <div class="font-semibold text-almostGrey px-8">
         <a class="flex items-center hover:text-almostBlack" href="#">Login</a>
@@ -106,35 +113,43 @@
         Register</button>
     </section>
 
+
   </header>
 
-  <main class="flex lg:flex-row w-[95%] justify-around mt-16">
+  <main class="flex flex-col-reverse md:flex-row w-[95%] justify-around mt-8 md:mt-16 gap-16 md:gap-0 md:items-end">
 
-    <section class="flex flex-col gap-20 justify-end">
+    <section class="flex flex-col gap-20 items-center md:items-start">
+      <article class="flex flex-col gap-10 items-center md:items-start">
 
-      <article class="flex flex-col gap-10">
-        <h1 class="font-bold text-8xl">Make<br> remote work</h1>
-        <p class="w-[45ch] text-almostGrey first-line:text-pretty font-medium">Get your team in sync, no matter your
+        <h1 class="md:w-[11ch] font-bold items-center text-3xl md:text-8xl md:items-start text-center md:text-left">Make
+          remote work</h1>
+        <p
+          class="items-center md:items-start md:w-[45ch] text-almostGrey first-line:text-pretty text-center md:text-left">
+          Get your team in sync, no matter your
           location.
-          Streamline processes, create team rituals, and watch productivity soar.</p>
+          Streamline processes, create team rituals, and watch productivity soar.
+        </p>
         <button
           class="w-fit font-semibold bg-almostBlack text-almostWhite hover:text-almostBlack hover:outline hover:bg-almostWhite py-4 px-8 rounded-xl">Learn
-          More</button>
-      </article>
+          More
+        </button>
 
-      <div class="flex gap-10 items-center">
-        <img src="./images/client-databiz.svg" alt="">
-        <img src="./images/client-audiophile.svg" alt="">
-        <img src="./images/client-meet.svg" alt="">
-        <img src="./images/client-maker.svg" alt="">
-      </div>
+        <div class="md:flex md:gap-10 mt-8 grid grid-cols-4 mb-10 md:mb-0 items-center justify-center gap-4">
+          <img src="./images/client-databiz.svg">
+          <img src="./images/client-audiophile.svg">
+          <img src="./images/client-meet.svg">
+          <img src="./images/client-maker.svg">
+        </div>
+
+      </article>
     </section>
 
-
-    <img class="w-[50vh] h-full" src="./images/image-hero-desktop.png" alt="">
-
+    <figure class="h-[100vh] md:w-[50vh] h-fit ">
+      <img src="./images/image-hero-desktop.png" alt="">
+    </figure>
 
   </main>
+
   <script src="./script.js"></script>
 </body>
 
