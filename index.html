@@ -99,7 +99,7 @@
       </nav>
     </div>
 
-    <button class="pr-2 md:hidden">
+    <button class="pr-2 md:hidden z-10" onclick="openMenu()">
       <img id="menu" class="md:hidden" src="./images/icon-menu.svg">
       <img id="closeMenu" class="md:unset hidden" src="./images/icon-close-menu.svg">
     </button>
@@ -110,9 +110,66 @@
         <a class="flex items-center hover:text-almostBlack" href="#">Login</a>
       </div>
       <button
-        class="w-fit font-semibold bg-almostBlack text-almostWhite hover:text-almostBlack hover:outline hover:bg-almostWhite py-4 px-8 rounded-xl">
+        class="w-fit font-semibold outline text-almostGrey hover:text-almostBlack hover:outline hover:bg-almostWhite py-4 px-8 rounded-xl">
         Register</button>
     </section>
+
+  </header>
+  
+  <!-- header mobile -->
+  <header id ="headerMobile" class="hidden md:none flex-col w-[65%] bg-almostWhite right-0 h-[100svh] md:hidden shadow-lg gap-3 absolute">
+
+    <nav class="flex flex-col gap-6 pt-24 px-6">
+      <div class="flex flex-col font-semibold text-almostGrey">
+        <button id="FeaturesMobile" class="flex gap-1 hover:text-almostBlack">
+          Features
+          <img id="FeaturesArrowMobile" class="p-2 rotate-0" src="./images/icon-arrow-down.svg" alt="">
+        </button>
+        <div id="FeaturesContentMobile"
+          class="hidden flex flex-col gap-4 bg-[#fff] p-8 w-fit rounded-xl top-[90px]">
+          <a class="flex gap-4 items-center hover:text-almostBlack" href="#"><img src="./images/icon-todo.svg" alt="">To
+            Do list</a>
+          <a class="flex gap-4 items-center hover:text-almostBlack" href="#"><img src="./images/icon-calendar.svg"
+              alt="">Calendar</a>
+          <a class="flex gap-4 items-center hover:text-almostBlack" href="#"><img src="./images/icon-reminders.svg"
+              alt="">Reminders</a>
+          <a class="flex gap-4 items-center hover:text-almostBlack" href="#"><img src="./images/icon-planning.svg"
+              alt="">Planning</a>
+        </div>
+      </div>
+  
+      <div class="flex flex-col font-semibold gap-2 text-almostGrey">
+        <button id="CompanyMobile" class="flex gap-1 hover:text-almostBlack">
+          Company
+          <img id="CompanyArrowMobile" class="p-2 rotate-0" src="./images/icon-arrow-down.svg" alt="">
+        </button>
+        <div id="CompanyContentMobile"
+          class="hidden flex-col gap-4 bg-[#fff] p-8 w-fit rounded-xl top-[90px]">
+          <a class="flex gap-4 items-center hover:text-almostBlack" href="#">History</a>
+          <a class="flex gap-4 items-center hover:text-almostBlack" href="#">Our Team</a>
+          <a class="flex gap-4 items-center hover:text-almostBlack" href="#">Blog</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col font-semibold gap-2 text-almostGrey">
+        <a class="flex gap-4 items-center hover:text-almostBlack" href="#">Careers</a>
+      </div>
+
+      <div class="flex flex-col font-semibold gap-2 text-almostGrey">
+        <a class="flex gap-4 items-center hover:text-almostBlack" href="#">About</a>
+      </div>
+
+      <section class="gap-6 flex flex-col items-center mt-8">
+
+        <div class="font-semibold text-almostGrey px-8">
+          <a class="w-full flex items-center hover:text-almostBlack" href="#">Login</a>
+        </div>
+        <button
+          class="w-full font-semibold outline text-almostGrey hover:text-almostBlack hover:outline hover:bg-almostWhite py-4 px-8 rounded-xl">
+          Register</button>
+      </section>
+
+    </nav>
 
   </header>
 
@@ -121,7 +178,7 @@
     <section class="flex flex-col gap-20 items-center md:items-start">
       <article class="flex flex-col gap-10 items-center md:items-start">
 
-        <h1 class="md:w-[11ch] font-bold items-center text-3xl md:text-8xl md:items-start text-center md:text-left">Make
+        <h1 class="md:w-[11ch] font-bold items-center text-4xl md:text-8xl md:items-start text-center md:text-left">Make
           remote work</h1>
         <p
           class="items-center md:items-start md:w-[45ch] text-almostGrey first-line:text-pretty text-center md:text-left">
